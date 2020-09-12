@@ -3,9 +3,9 @@ package main
 import (
 	"context"
 	"fmt"
-	"github.com/tencentyun/cos-go-sdk-v5"
-	"github.com/tencentyun/cos-go-sdk-v5/debug"
-	"github.com/tencentyun/qcloud-cos-sts-sdk/go"
+	"github.com/huanght1997/cos-go-sdk-v5"
+	"github.com/huanght1997/cos-go-sdk-v5/debug"
+	"github.com/huanght1997/qcloud-cos-sts-sdk/go"
 	"net/http"
 	"net/url"
 	"os"

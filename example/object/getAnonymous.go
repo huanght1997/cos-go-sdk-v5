@@ -8,7 +8,7 @@ import (
 
 	"io/ioutil"
 
-	"github.com/tencentyun/cos-go-sdk-v5"
+	"github.com/huanght1997/cos-go-sdk-v5"
 )
 
 func log_status(err error) {

@@ -12,8 +12,8 @@ import (
 	"io/ioutil"
 	"time"
 
-	"github.com/tencentyun/cos-go-sdk-v5"
-	"github.com/tencentyun/cos-go-sdk-v5/debug"
+	"github.com/huanght1997/cos-go-sdk-v5"
+	"github.com/huanght1997/cos-go-sdk-v5/debug"
 )
 
 func log_status(err error) {

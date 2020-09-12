@@ -4,7 +4,7 @@
 
 ## Install
 
-`go get -u github.com/tencentyun/cos-go-sdk-v5`
+`go get -u github.com/huanght1997/cos-go-sdk-v5`
 
 
 ## Usage
@@ -21,7 +21,7 @@ import (
 	"os"
 	"time"
 	
-	"github.com/tencentyun/cos-go-sdk-v5"
+	"github.com/huanght1997/cos-go-sdk-v5"
 )
 
 func main() {

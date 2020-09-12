@@ -440,9 +440,10 @@ type ObjectDeleteMultiResult struct {
 	XMLName        xml.Name `xml:"DeleteResult"`
 	DeletedObjects []Object `xml:"Deleted,omitempty"`
 	Errors         []struct {
-		Key     string
-		Code    string
-		Message string
+		Key       string
+		VersionId string
+		Code      string
+		Message   string
 	} `xml:"Error,omitempty"`
 }
 

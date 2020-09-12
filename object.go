@@ -309,6 +309,32 @@ func (s *ObjectService) Delete(ctx context.Context, name string, opt ...*ObjectD
 	return resp, err
 }
 
+// Delete Object请求可以将一个文件（Object）删除。该方法用于删除某一个特定版本。
+//
+// https://www.qcloud.com/document/product/436/7743
+func (s *ObjectService) DeleteVersion(ctx context.Context, name string, versionId string, opt ...*ObjectDeleteOptions) (*Response, error) {
+	var optHeader *ObjectDeleteOptions
+	// When use "" string might call the delete bucket interface
+	if len(name) == 0 {
+		return nil, errors.New("empty object name")
+	}
+	if len(opt) > 0 {
+		optHeader = opt[0]
+	}
+	u := "/" + encodeURIComponent(name)
+	if versionId != "" {
+		u += "?versionId=" + versionId
+	}
+	sendOpt := sendOptions{
+		baseURL:   s.client.BaseURL.BucketURL,
+		uri:       u,
+		method:    http.MethodDelete,
+		optHeader: optHeader,
+	}
+	resp, err := s.client.send(ctx, &sendOpt)
+	return resp, err
+}
+
 // ObjectHeadOptions is the option of HeadObject
 type ObjectHeadOptions struct {
 	IfModifiedSince string `url:"-" header:"If-Modified-Since,omitempty"`

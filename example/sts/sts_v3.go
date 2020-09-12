@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"github.com/huanght1997/cos-go-sdk-v5"
 	"github.com/huanght1997/cos-go-sdk-v5/debug"
-	"github.com/huanght1997/qcloud-cos-sts-sdk/go"
+	"github.com/tencentyun/qcloud-cos-sts-sdk/go"
 	"net/http"
 	"net/url"
 	"os"
